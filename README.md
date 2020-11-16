@@ -36,6 +36,8 @@ Run	Flags included?	Intermed.layers	Units	Epochs	Starting state	Norm.	Loss	Accur
 7	No		3		100	60	1		Nadam	0.4285	0.8186
 8	No		3		100	60	1		Adamax	0.4372	0.8121
 
+
+
 Decision trees (file exoplanet_search_random_forest)
 
 Just two runs; as above, including the flag columns gives a very high accuracy. Without them comparable to other models.
