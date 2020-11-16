@@ -53,26 +53,26 @@ Run varying several parameters. Noted that when the flagged columns were include
 Surprising here was that removing the flag columns had little effect when the "gini" criterion was used with all features, but reduced accuracy when either of these was changed. I don't pretend to understand this well enough to offer an explanation.
 
 Run	Flags included?	Random state	Estimators	rf.score(X_test, y_test)	Criterion	max_features
-1	Yes		57		200		0.9904				gini	n_features
-2	No		57		200		1.0				gini	n_features
-3	Yes		57		50		0.9895				gini	n_features
-4	Yes		57		10		0.9891				gini	n_features
-5	Yes		312		200		0.9882				gini	n_features
-6	Yes		57		200		0.9904				entropy	n_features
-7	Yes		57		200		0.9904				gini	auto
-8	No		57		200		0.8386				entropy	n_features
-9	No		57		200		0.8369				gini	auto
+1	Yes		57	200		0.9904	gini	n_features
+2	No		57	200		1.0	gini	n_features
+3	Yes		57	50		0.9895	gini	n_features
+4	Yes		57	10		0.9891	gini	n_features
+5	Yes		312	200		0.9882	gini	n_features
+6	Yes		57	200		0.9904	entropy	n_features
+7	Yes		57	200		0.9904	gini	auto
+8	No		57	200		0.8386	entropy	n_features
+9	No		57	200		0.8369	gini	auto
 
 
 Grid search with Support Vector Classification (SVC) (file exoplanet_search_grid)
 
 As mentioned above, used a reduced set of columns and rows (with no flagged values), because even so each run took several hours. Results are therefore not directly comparable with those of other methods. The main result from the first four runs is simply that C and gamma are not yet optimized.
 
-Run	C			Gamma			Best C	Best gamma	Test Acc	
-1	[1, 5, 10]		[0.0001, 0.001, 0.01]	1	0.0001		0.752		
-2	[0.1, 0.5, 1]		[1e-05, 5e-05, 0.0001]	0.1	1e-05		0.771
-3	[0.001, 0.05, 0.1]	[1e-06, 5e-06, 1e-05]	0.001	1e-06		0.793
-4	[0.0001, 0.001, 0.01]	[1e-08, 1e-07, 1e-06]	0.01	1e-08		0.797
+Run	C			Gamma	Best C	Best gamma	Test Acc	
+1	[1, 5, 10]		[0.0001, 0.001, 0.01]	1	0.0001	0.752		
+2	[0.1, 0.5, 1]		[1e-05, 5e-05, 0.0001]	0.1	1e-05	0.771
+3	[0.001, 0.05, 0.1]	[1e-06, 5e-06, 1e-05]	0.001	1e-06	0.793
+4	[0.0001, 0.001, 0.01]	[1e-08, 1e-07, 1e-06]	0.01	1e-08	0.797
 
 
 
