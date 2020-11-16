@@ -50,18 +50,18 @@ Random forest (file exoplanet_search_random_forest)
 
 Run varying several parameters. Noted that when the flagged columns were included, they were always among the highest ranked (see file for details). "planet_radius" was high on the list in all cases, not surprising since planets are detected as they pass in front of their stars. Changes in stellar flux also rank high - seems predictable, a bigger change should be easier to detect.
 
-Surprising here was that removing the flag columns had little effect when the "gini" criterion was used with all features, but reduced accuracy when wither of these was changed. I don't pretend to understand this well enough to offer an explanation.
+Surprising here was that removing the flag columns had little effect when the "gini" criterion was used with all features, but reduced accuracy when either of these was changed. I don't pretend to understand this well enough to offer an explanation.
 
 Run	Flags included?	Random state	Estimators	rf.score(X_test, y_test)	Criterion	max_features
-1	Yes		57		200		0.9904				gini		n_features
-2	No		57		200		1.0				gini		n_features
-3	Yes		57		50		0.9895				gini		n_features
-4	Yes		57		10		0.9891				gini		n_features
-5	Yes		312		200		0.9882				gini		n_features
-6	Yes		57		200		0.9904				entropy		n_features
-7	Yes		57		200		0.9904				gini		auto
-8	No		57		200		0.8386				entropy		n_features
-9	No		57		200		0.8369				gini		auto
+1	Yes		57		200		0.9904				gini	n_features
+2	No		57		200		1.0				gini	n_features
+3	Yes		57		50		0.9895				gini	n_features
+4	Yes		57		10		0.9891				gini	n_features
+5	Yes		312		200		0.9882				gini	n_features
+6	Yes		57		200		0.9904				entropy	n_features
+7	Yes		57		200		0.9904				gini	auto
+8	No		57		200		0.8386				entropy	n_features
+9	No		57		200		0.8369				gini	auto
 
 
 Grid search with Support Vector Classification (SVC) (file exoplanet_search_grid)
